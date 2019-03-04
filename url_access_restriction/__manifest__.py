@@ -9,6 +9,9 @@
 	'summary':'Module Use of Url Access Restriction',
 	'license': 'AGPL-3',
 	'depends': ['web'],
+	'images': [
+		'static/description/icon.png'
+	],
 	'data':['views/url_access_restriction.xml'],
 	'qweb': ['static/src/xml/warning_message_page.xml'],
 	'installable': True,
