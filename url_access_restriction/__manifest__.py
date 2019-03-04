@@ -10,7 +10,7 @@
 	'license': 'AGPL-3',
 	'depends': ['web'],
 	'images': [
-		'static/description/icon.png'
+		'static/description/src/img/main_screenshot.png'
 	],
 	'data':['views/url_access_restriction.xml'],
 	'qweb': ['static/src/xml/warning_message_page.xml'],
