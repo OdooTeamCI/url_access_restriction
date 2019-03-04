@@ -3,8 +3,8 @@
   <t t-name="WarningMessageTemplate">
     <div style="text-align:center;color:red;padding-top:7%;">
       <h1><i class="fa fa-ban fa-6x"></i></h1>
-      <h4>Désolé!, Vous n'avez pas accès à cette interface.</h4>
-      <h4>Veuillez Contacter l'Administrateur SVP.</h4>
+      <h4>Access Denied.</h4>
+      <h4>Please contact the Administrator.</h4>
     </div>
   </t>
 </templates>
