@@ -30,16 +30,15 @@ class UrlAction(main.Action):
 
 
 	def _user_has_acces_right(self, action_id, menu, user):
-		if not menu:
-			# S'il n'y a pas de menu associé à l'action, on vérifie si c'est une action window
-			action = request.env['ir.actions.act_window'].sudo().search([('id','=',action_id)], limit=1)
-			# Si c'est une action window et qu'il y a un group associé à l'action
-			if action and len(action.groups_id) > 0:
-				# On vérifie si l'utilisateur a droit à l'action
-				if any(elem in user.groups_id.ids  for elem in action.groups_id.ids):
-					# L'utilisateur a droit à l'action
-					return True
-				return False
+		# S'il n'y a pas de menu associé à l'action, on vérifie si c'est une action window
+		action = request.env['ir.actions.act_window'].sudo().search([('id','=',action_id)], limit=1)
+		# Si c'est une action window et qu'il y a un group associé à l'action
+		if action and len(action.groups_id) > 0:
+			# On vérifie si l'utilisateur a droit à l'action
+			if any(elem in user.groups_id.ids  for elem in action.groups_id.ids):
+				# L'utilisateur a droit à l'action
+				return True
+			return False
 		if menu and len(menu.groups_id.ids) > 0:
 			if any(elem in user.groups_id.ids  for elem in menu.groups_id.ids):
 				return True
