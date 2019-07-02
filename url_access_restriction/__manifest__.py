@@ -5,7 +5,7 @@
 	'version': '1',
 	'category': 'Web',
 	'sequence': 0,
-	'author': 'OdooTeamCI',
+	'author': 'OdooTeamCI, SLife Organization',
 	'summary':'Module Use of Url Access Restriction',
 	'license': 'AGPL-3',
 	'depends': ['web'],
